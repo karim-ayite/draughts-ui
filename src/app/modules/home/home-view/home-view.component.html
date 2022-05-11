@@ -1,0 +1,50 @@
+<div class="form-container">
+  <h1>Welcome</h1>
+
+  <p>
+    Elementum potenti porttitor morbi. Habitasse porttitor laoreet quam per nam ad justo lacus litora accumsan luctus.
+    Lectus semper, aptent vehicula augue dis et mattis arcu iaculis euismod curae; id. Venenatis libero justo primis
+    taciti aenean congue iaculis mauris mauris aliquet fermentum. Semper primis pharetra magnis diam netus arcu
+    fringilla netus. Faucibus interdum sollicitudin fringilla iaculis fringilla elementum congue conubia ridiculus.
+    Senectus senectus vivamus sociis curabitur? Luctus nam nibh auctor nunc pulvinar posuere laoreet torquent ac iaculis
+    vitae. Dis odio condimentum cubilia. Congue class class turpis lobortis porta cras, ullamcorper etiam gravida
+    fringilla pharetra. Sed himenaeos et potenti arcu justo.
+  </p>
+  <p>
+    Hendrerit accumsan dignissim parturient pretium euismod pretium. Vel at malesuada risus viverra odio orci curabitur
+    rhoncus? Donec himenaeos sem pharetra imperdiet condimentum enim mi neque facilisis quis volutpat. At leo hendrerit
+    eleifend nisl dolor curabitur bibendum sociosqu duis habitasse ad dictumst. Aliquet platea justo aptent eu litora
+    quam consequat. Primis primis urna conubia aliquam. Eleifend diam faucibus parturient ad venenatis nullam. Vitae leo
+    primis gravida ultricies pellentesque ut venenatis. Magnis tempor elit imperdiet! Proin sit ullamcorper phasellus
+    integer justo fringilla odio odio. Quis, sollicitudin feugiat ac lobortis cursus ligula. Per urna mi sociosqu.
+    Justo?
+  </p>
+  <p>
+    Fermentum vel blandit curae; donec libero sapien ultrices penatibus amet. Turpis auctor turpis hac vehicula, sit
+    fames. Curabitur mattis id tempor. Suspendisse, cras cum augue eros. Fringilla vitae et inceptos aliquet mi nascetur
+    aenean mollis torquent lobortis felis. Venenatis vehicula magna quis habitasse taciti ad. Purus tempor sollicitudin
+    sem dolor orci. Sodales etiam molestie proin mus vehicula.
+  </p>
+
+  <mat-card>
+    <mat-card-title>Create a draughts game</mat-card-title>
+    <form class="form-container">
+
+      <mat-form-field hintLabel="Max 10 characters">
+        <mat-label>Enter your player name</mat-label>
+        <input matInput #input maxlength="10" placeholder="Ex. Nougat" required>
+        <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+      </mat-form-field>
+
+      <div>
+        <label>Choose your color : </label>
+        <mat-radio-group>
+          <mat-radio-button value="0">Dark</mat-radio-button>
+          <mat-radio-button value="1">Light</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <button mat-raised-button color="accent">Create a game</button>
+    </form>
+  </mat-card>
+</div>
