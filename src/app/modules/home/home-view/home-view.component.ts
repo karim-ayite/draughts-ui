@@ -20,5 +20,7 @@ export class HomeViewComponent implements OnInit {
   }
 
 
+  createGame() {
 
+  }
 }
