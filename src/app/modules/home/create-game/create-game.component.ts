@@ -21,6 +21,7 @@ export class CreateGameComponent implements OnInit {
   }
 
   onClickCreateAGame() {
+    this.piecesColorControl.markAsTouched();
     console.log('formValue => ',this.createGameForm.value);
   }
 
@@ -29,7 +30,7 @@ export class CreateGameComponent implements OnInit {
   }
 
   getPiecesColorErrorMessage() {
-    return this.piecesColorControl.hasError('required') ? 'Pieces color choice is required' : '';
+    return this.piecesColorControl.touched && this.piecesColorControl.hasError('required') ? 'Pieces color choice is required' : '';
   }
 
   get playerNameControl(){
