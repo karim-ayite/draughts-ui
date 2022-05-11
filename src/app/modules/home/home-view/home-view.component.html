@@ -26,25 +26,5 @@
     sem dolor orci. Sodales etiam molestie proin mus vehicula.
   </p>
 
-  <mat-card>
-    <mat-card-title>Create a draughts game</mat-card-title>
-    <form class="container" [formGroup]="createGameForm">
-
-      <mat-form-field hintLabel="Max 10 characters">
-        <mat-label>Enter your player name</mat-label>
-        <input matInput #input formControlName="playerName" maxlength="10" placeholder="Ex. Nougat" required>
-        <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
-      </mat-form-field>
-
-      <div>
-        <label>Choose your pieces color : </label>
-        <mat-radio-group required formControlName="piecesColor">
-          <mat-radio-button value="0">Dark</mat-radio-button>
-          <mat-radio-button value="1">Light</mat-radio-button>
-        </mat-radio-group>
-      </div>
-
-      <button mat-raised-button color="accent" (click)="onCreateAGame()">Create a game</button>
-    </form>
-  </mat-card>
+ <app-create-game></app-create-game>
 </div>

@@ -8,13 +8,10 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class HomeViewComponent implements OnInit {
 
-   createGameForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
-    this.createGameForm = this.formBuilder.group({
-      playerName : ['',Validators.required],
-      piecesColor : ['',Validators.required]
-    });
+
+  constructor() {
+
   }
 
 
@@ -22,7 +19,6 @@ export class HomeViewComponent implements OnInit {
 
   }
 
-  onCreateAGame() {
-    console.log('formValue => ',this.createGameForm.value);
-  }
+
+
 }

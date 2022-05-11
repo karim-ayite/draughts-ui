@@ -6,7 +6,3 @@
   align-items: center;
   margin: 30px;
 }
-
-.mat-radio-button ~ .mat-radio-button {
-  margin-left: 16px;
-}

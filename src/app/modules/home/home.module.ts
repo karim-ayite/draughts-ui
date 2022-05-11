@@ -11,11 +11,13 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-b
 import {MatButtonModule} from "@angular/material/button";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatCardModule} from "@angular/material/card";
+import { CreateGameComponent } from './create-game/create-game.component';
 
 
 @NgModule({
   declarations: [
-    HomeViewComponent
+    HomeViewComponent,
+    CreateGameComponent
   ],
   imports: [
     CommonModule,
