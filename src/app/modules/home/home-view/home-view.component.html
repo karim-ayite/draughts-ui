@@ -1,4 +1,4 @@
-<div class="form-container">
+<div class="container">
   <h1>Welcome</h1>
 
   <p>
@@ -28,23 +28,23 @@
 
   <mat-card>
     <mat-card-title>Create a draughts game</mat-card-title>
-    <form class="form-container">
+    <form class="container" [formGroup]="createGameForm">
 
       <mat-form-field hintLabel="Max 10 characters">
         <mat-label>Enter your player name</mat-label>
-        <input matInput #input maxlength="10" placeholder="Ex. Nougat" required>
+        <input matInput #input formControlName="playerName" maxlength="10" placeholder="Ex. Nougat" required>
         <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
       </mat-form-field>
 
       <div>
-        <label>Choose your color : </label>
-        <mat-radio-group>
+        <label>Choose your pieces color : </label>
+        <mat-radio-group required formControlName="piecesColor">
           <mat-radio-button value="0">Dark</mat-radio-button>
           <mat-radio-button value="1">Light</mat-radio-button>
         </mat-radio-group>
       </div>
 
-      <button mat-raised-button color="accent">Create a game</button>
+      <button mat-raised-button color="accent" (click)="onCreateAGame()">Create a game</button>
     </form>
   </mat-card>
 </div>

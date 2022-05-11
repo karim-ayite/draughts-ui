@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-home-view',
@@ -8,12 +8,21 @@ import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 })
 export class HomeViewComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder) {
+   createGameForm: FormGroup;
 
+  constructor(private formBuilder: FormBuilder) {
+    this.createGameForm = this.formBuilder.group({
+      playerName : ['',Validators.required],
+      piecesColor : ['',Validators.required]
+    });
   }
+
 
   ngOnInit(): void {
 
   }
 
+  onCreateAGame() {
+    console.log('formValue => ',this.createGameForm.value);
+  }
 }
